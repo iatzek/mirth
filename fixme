@@ -1,0 +1,4 @@
+#!/bin/bash
+docker compose run -u root db bash -c "chmod -R o+rwX,u+rwX,g+rwX  /var/lib/postgresql/data"
+docker compose run -u root mc bash -c "chmod -R 1777  /var/tmp"
+docker compose run -u root mc bash -c "chmod -R 777  /opt/connect/appdata"
